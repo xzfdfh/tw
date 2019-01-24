@@ -1,0 +1,141 @@
+@import "reset.styl"
+@font-face
+  font-family: "cruise"
+  src:url('fonts/cruise.ttf?srz1pg') format('truetype'),
+  url('fonts/cruise.woff?srz1pg') format('woff'),
+  url('fonts/cruise.svg?srz1pg#cruise') format('svg')
+.ico
+	font-family:"cruise" !important
+	font-size:16px
+	font-style:normal
+	-webkit-font-smoothing: antialiased
+	-webkit-text-stroke-width: 0.2px
+	-moz-osx-font-smoothing: grayscale
+
+.incenter
+  width:1200px
+  margin:0px auto
+
+setwh(w,h)
+  width:w
+  height:h
+bgc(n)
+  background-color:n
+
+
+header
+  text-align:center
+  height:70px
+  box-shadow: 0px 2px 9px rgba(45, 64, 84, 0.16)
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  .inner
+    @extend .incenter
+    display:flex
+    justify-content: space-between
+    height:70px
+    align-items: center
+    .skip
+      width:70px
+    .rg
+      display:inline-block
+      width:70px
+      height:40px
+      .thumb
+        setwh(40px,40px)
+        overflow: hidden
+        border-radius: 20px
+        float:left
+      em
+        font-size:18px
+        line-height:40px
+      img
+        setwh(40px,40px)
+  .logo
+    width:100px
+    text-align: center
+    
+.main
+  @extend .incenter
+  min-height: calc(100vh - 29px)
+  .holder
+    height:70px
+  .dash
+    margin-left:300px;
+    padding-top:18px
+    min-height: calc(100vh - 29px)
+    .counter
+      height:132px
+      >li
+        width:30%
+        height:116px
+        overflow:hidden
+        float:left;
+        margin-right:30px
+      >li:nth-child(1)
+        bgc(#ffb900)
+      >li:nth-child(2)
+        bgc(#7fbc39)
+      .last
+        margin-right:0px
+        bgc(#fff)
+    .searcher
+      bgc(#fff)
+      width:870px
+      height:53px
+      >li
+        float:left;  
+    .datalst
+      width:870px
+      margin-top:16px;
+      >li
+        margin-bottom:16px;
+        height:108px;
+        bgc(#fff)
+        .item-details
+          ol
+            display:block;
+            height:30px
+          li
+            float:left
+      .item-icon
+        setwh(108px,108px)
+        float:left;
+        background-position: center;
+        background-repeat: no-repeat;
+      .item-icon-win
+        background-image: url('../images/windows.png');
+  .cate
+    bgc(#2d4054)
+    width:270px
+    float:left
+    min-height: calc(100vh - 100px)
+    ul
+      padding-top:32px;
+    li
+      height:50px
+      line-height:50px
+      color:#fff
+      padding-left:30px
+      &:hover
+        bgc(#435466)
+        color:#00b4cf
+      em
+        margin-right:20px
+    .on
+      bgc(#435466)
+      color:#00b4cf
+      
+
+footer
+  height:29px
+  width:100%
+  box-shadow: 0px -2px 9px rgba(45, 64, 84, 0.16)
+  text-align:center
+  color:#435466
+  line-height:29px
+  i
+    font-style:normal
+    font-weight:bolder
+
